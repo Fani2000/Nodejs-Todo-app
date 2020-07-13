@@ -33,11 +33,10 @@ app.get('/', (req, res) => {
     let day = today.getCurrentDate()
 
     Task.find((err, results) => {
-            if (err) console.log(err)
+        if (err) console.log(err)
 
-            res.render("list", { day: day, newItems: results })
-        })
-        // console.log(ts)
+        res.render("list", { day: day, newItems: results })
+    })
 })
 
 app.get('/about', (req, res) => {
